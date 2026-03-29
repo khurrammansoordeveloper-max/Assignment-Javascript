@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Binary Converter</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 300px;
+        text-align: center;
+    }
+    input {
+        width: 80%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button {
+        padding: 8px 15px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #218838;
+    }
+    .result {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+    .error {
+        color: red;
+        font-size: 0.9em;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+    <h2>Decimal to Binary</h2>
+    <input type="text" id="decimalInput" placeholder="Enter decimal number">
+    <br>
+    <button onclick="convertToBinary()">Convert</button>
+    <div id="errorMsg" class="error"></div>
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+function convertToBinary() {
+    const input = document.getElementById("decimalInput").value.trim();
+    const errorMsg = document.getElementById("errorMsg");
+    const result = document.getElementById("result");
+
+    errorMsg.textContent = "";
+    result.textContent = "";
+
+    // Validate input: must be an integer
+    if (input === "" || isNaN(input) || !Number.isInteger(Number(input))) {
+        errorMsg.textContent = "Please enter a valid integer.";
+        return;
+    }
+
+    const decimalNumber = parseInt(input, 10);
+
+    // Handle negative numbers
+    if (decimalNumber < 0) {
+        result.textContent = `Binary: -${Math.abs(decimalNumber).toString(2)}`;
+    } else {
+        result.textContent = `Binary: ${decimalNumber.toString(2)}`;
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
