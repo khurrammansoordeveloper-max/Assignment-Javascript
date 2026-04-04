@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> OnClick Show Hello </title>
+</head>
+<body>
+     <h1>JavaScript Functions</h1>
+
+<p>You can call functions from events.</p>
+<button onclick="ShowHello()">Click me</button>
+<p id ='demo'></p>
+
+<script> 
+function sayHello() {
+    return "hello world";
+}
+function showHello() {
+    document.getElementById('demo').innerHTML = 
+    sayHello();
+
+}
+
+
+</script>
+</body>
+</html>

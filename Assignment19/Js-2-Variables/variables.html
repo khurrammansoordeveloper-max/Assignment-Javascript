@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Variables </title>
+</head>
+<body>
+    <h1>JavaScript Variables </h1>
+
+    <ul>
+        <li><i>  VAR = Scope: Function-scoped. If declared inside a function,</i></li> 
+            <li><i> it is local to that function. it is local to that function.</i></li>
+            <li><i>If declared outside any function, it becomes global..  </i></li>
+            <li><i> Hoisting: Variables declared with var are hoisted to the top of their </i></li>
+            <li><i></i>scope and initialized with undefined.  </i></li>
+            <li><i> Re-declaration: You can re-declare the same variable multiple times without error.  </i></li>
+            <li><i>  Use case: Older JavaScript code predominantly uses var, but it has some quirks that can lead to bugs. </i></li>
+        
+    </ul>
+        <p>  let
+    Scope: Block-scoped (only accessible within the block {} where it is declared).
+    Hoisting: Variables declared with let are hoisted but not initialized, causing a "temporal dead zone" until their declaration is reached.
+    Re-declaration: You cannot re-declare a variable with let in the same scope.
+    Use case: Preferred for variables that will change value and need block scoping. </p>
+
+    <p>  const
+    Scope: Block-scoped, like let.
+    Hoisting: Same behavior as let with temporal dead zone.
+    Re-declaration: Cannot be re-declared or reassigned.
+    Use case: For variables that should never be reassigned (constants). However, if the variable holds an object or array, the contents can still be modified. </p>
+        
+    <script src="./variables.js"> </script>
+</body>
+</html>

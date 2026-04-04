@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Primitive & Non-Primitive Data Types </title>
+</head>
+<body>
+    <h1> Primitive & Non-Primitive Data Types </h1>
+    <p> </p>
+
+
+
+    <script>
+        // Primitive Example
+let x = 10;
+let y = x; // y gets a copy of 10
+y = 20; 
+console.log(x); // Still 10!
+
+// Non-Primitive Example
+let arr1 = [1, 2];
+let arr2 = arr1; // arr2 points to the SAME array in memory
+arr2.push(3);
+console.log(arr1); // Prints [1, 2, 3]! Both changed.
+
+//Primitive Examples (Values)
+//These are independent. Changing one variable does not affect another.
+//Strings & Booleans:
+let str1 = "Hello";
+let str2 = str1; // str2 gets a copy of "Hello"
+str2 = "World";
+console.log(str1); // Still "Hello!"
+
+let bool1 = true;
+let bool2 = bool1; // bool2 gets a copy of true
+bool2 = false;
+console.log(bool1); // Still true!
+
+
+let greeting = "Hello";
+let copyGreeting = greeting; // A physical copy is made
+copyGreeting = "Hi"; 
+
+console.log(greeting);     // "Hello" (Original is safe)
+console.log(copyGreeting); // "Hi"
+
+//Null vs. Undefined:
+
+let score;              // Undefined (Variable exists, but has no value)
+let winner = null;      // Null (We intentionally set it to "empty")
+
+console.log(typeof score);  // "undefined"
+console.log(typeof winner); // "object" (A famous JS bug, but it's primitive!)
+
+
+//2. Non-Primitive Examples (References)
+//These are connected. If two variables point to the same object, they share the same data.
+
+//Objects (Key-Value Pairs):
+
+const car = { brand: "Toyota", color: "Red" };
+const myCar = car; // Both variables now point to the SAME car in memory
+
+myCar.color = "Blue"; 
+
+console.log(car.color);   // "Blue" (The original car changed!)
+console.log(myCar.color); // "Blue"
+
+//Arrays (Lists):
+const numbers = [1, 2, 3];
+const moreNumbers = numbers; // Both variables now point to the SAME array in memory
+
+moreNumbers.push(4);
+
+console.log(numbers);     // [1, 2, 3, 4] (The original array changed!)
+console.log(moreNumbers); // [1, 2, 3, 4]
+
+const shoppingList = ["Milk", "Eggs"];
+const sharedList = shoppingList;
+
+sharedList.push("Bread");
+
+console.log(shoppingList); // ["Milk", "Eggs", "Bread"]
+
+//The Spread Operator (...) is like a magic
+//tool that creates a new copy of an array or object, breaking the connection between them. This way, you can change one without affecting the other!
+const originalFruits = ["Apple", "Banana"];
+
+// Use [...] to spread the old values into a NEW array
+const shallowCopy = [...originalFruits];
+
+shallowCopy.push("Mango");
+
+console.log("Original:", originalFruits); // ["Apple", "Banana"] (Safe!)
+console.log("Copy:", shallowCopy);         // ["Apple", "Banana", "Mango"]
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array Operations </title>
+</head>
+<body>
+    <h1> Array Operations </h1>
+    
+    <script>
+        // Create an array
+        let fruits = ["Apple", "Banana", "Cherry"];
+        console.log("Original Array:", fruits);
+
+        // Add an element to the end of the array
+        fruits.push("Dates");
+        console.log("After push:", fruits);
+
+        // Remove the last element from the array
+        let removedFruit = fruits.pop();
+        console.log("Removed Fruit:", removedFruit);
+        console.log("After pop:", fruits);
+
+        // Add an element to the beginning of the array
+        fruits.unshift("Elderberry");
+        console.log("After unshift:", fruits);
+
+        // Remove the first element from the array
+        let shiftedFruit = fruits.shift();
+        console.log("Removed Fruit:", shiftedFruit);
+        console.log("After shift:", fruits);
+
+        // Find the index of an element
+        let index = fruits.indexOf("Banana");
+        console.log("Index of Banana:", index);
+
+        // Check if an element exists in the array
+        let hasCherry = fruits.includes("Cherry");
+        console.log("Contains Cherry?", hasCherry);
+        // Iterate over the array
+        console.log("Iterating over the array:");
+        fruits.forEach((fruit, index) => {
+            console.log(`${index}: ${fruit}`);
+        });
+
+    </script>
+</body>
+</html>

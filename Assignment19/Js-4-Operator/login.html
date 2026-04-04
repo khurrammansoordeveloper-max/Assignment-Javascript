@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Login Simulator </title>
+</head>
+<body>
+    <h1>Smart Login Simulator</h1>
+
+
+    <script>
+// Step 1: Declare saved credentials
+let savedEmail = "student@gmail.com";
+let savedPassword = "12345";
+
+// Step 2: Ask user for input
+let userEmail = prompt("Enter your email:");
+let userPassword = prompt("Enter your password:");
+
+// Step 3: Compare and print results
+console.log("Email Match:", userEmail == savedEmail);
+console.log("Password Match:", userPassword == savedPassword);
+
+// Step 4: Final login check
+console.log("Login Successful:", userEmail == savedEmail && userPassword == savedPassword);
+
+
+    </script>
+</body>
+</html>
